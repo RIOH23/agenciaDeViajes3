@@ -86,3 +86,58 @@ function calcularIndividual() {
 
     formularioIndividual.totalIndividual.value = total;
 }
+
+var formularioPaquetero = document.getElementById("paquetero");
+
+function calcularPaquete() {
+    total = 0;
+    var destino = formularioPaquetero.destino.value;
+
+    if (destino == "suramerica") {
+        total += 7999;
+    }
+    else if (destino == "europa") {
+        total += 21999;
+    }
+    else if (destino == "africa") {
+        total += 17999;
+    }
+    else if (destino == "asia") {
+        total += 25999;
+    }
+    else if (destino == "norteamerica") {
+        total += 12999;
+    }
+    else {
+        alert ("Por favor, seleccione un destino.");
+        return;
+    }
+
+    var diasPaquetero = formularioPaquetero["dias-paquete"].value;
+    var numDias = parseInt(diasPaquetero);
+
+    if (isNaN(numDias) || numDias <= 0) {
+        alert("Por favor, ingrese un número válido de días.");
+        return;
+    }
+    total += (numDias * 899);
+
+    var paqueteEspecial = formularioPaquetero.especial.checked;
+
+    if (paqueteEspecial) {
+        total += 19999;
+    }
+
+    var costoPorExtra = 699;
+    var listaDeExtras = formularioPaquetero.extras;
+    var extrasSeleccionados = 0;
+    for (var i = 0; i < listaDeExtras.length; i++) { 
+        if (listaDeExtras[i].checked) {
+            extrasSeleccionados++;
+        }
+    }
+    total += (extrasSeleccionados * costoPorExtra);
+
+
+    formularioPaquetero.totalPaquetero.value = total;
+}
