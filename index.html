@@ -46,6 +46,7 @@
     <!-- FORMULARIO PRINCIPAL -->
     <div class="main-form">
         <!-- SECCIÓN 1: COTIZACIÓN INDIVIDUAL -->
+        <form action="" id="individual">
         <section class="form-section">
             <h2 class="section-title">Cotización Individual</h2>
             
@@ -94,59 +95,106 @@
                 <input type="number" id="dias-individual" name="dias-individual" min="1" max="365">
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Individual</button>
+            <div class="form-group">
+                <label for="totalIndividual"> Total a pagar: </label>
+                <input type="number" id="totalIndividual" name="totalIndividual" readonly>
+            </div>
+
+            <button type="button" class="submit-btn" 
+            onclick="calcularIndividual()">Cotización Individual</button>
         </section>
+        </form>
 
         <!-- SECCIÓN 2: PAQUETES -->
+         <form action="" id="paquetero">
         <section class="form-section">
             <h2 class="section-title">Paquetes (4 personas) </h2>
             
             <div class="form-group">
                 <label>Destinos Turísticos:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="destino" value="suramerica"> SurAmérica Colorida (7,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="europa"> Europa de Ensueño(21,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="africa"> África Salvaje (17,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="asia"> Asia de Tradiciones(25,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="norteamerica"> Norteamérica Moderna(12,999 MXN)</label>
+                    <label>
+                        <input type="radio" name="destino" value="suramerica"> 
+                        SurAmérica Colorida (7,999 MXN)
+                    </label>
+                    <label>
+                        <input type="radio" name="destino" value="europa"> 
+                        Europa de Ensueño(21,999 MXN)
+                    </label>
+                    <label>
+                        <input type="radio" name="destino" value="africa"> 
+                        África Salvaje (17,999 MXN)
+                    </label>
+                    <label>
+                        <input type="radio" name="destino" value="asia"> 
+                        Asia de Tradiciones(25,999 MXN)
+                    </label>
+                    <label>
+                        <input type="radio" name="destino" value="norteamerica"> Norteamérica Moderna(12,999 MXN)
+                    </label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="dias-paquete">Número de Días (899 MXN por día):</label>
+                <label for="dias-paquete">
+                    Número de Días (899 MXN por día):
+                </label>
                 <input type="number" id="dias-paquete" name="dias-paquete" min="1" max="365">
             </div>
 
             <div class="form-group">
-                <label>Paquete Especial (19,999 MXN):</label>
+                <label>
+                    Paquete Especial (19,999 MXN):
+                </label>
                 <div class="radio-group">
-                    <label><input type="radio" name="especial" value="crucero"> Crucero Romántico (7 días)</label>
+                    <label>
+                        <input type="radio" name="especial" value="crucero"> Crucero Romántico (7 días)
+                    </label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Opciones Extra (699 MXN por opcion) :</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="extras" value="bebidas"> Bebidas Alcohólicas</label>
-                    <label><input type="checkbox" name="extras" value="buceo"> Clases de Buceo</label>
-                    <label><input type="checkbox" name="extras" value="expedicion"> Tour de Expedición</label>
-                    <label><input type="checkbox" name="extras" value="fotografias"> Paquete de Fotografías</label>
-                    <label><input type="checkbox" name="extras" value="pesca"> Pesca en Altamar</label>
+                    <label>
+                        <input type="checkbox" name="extras" value="bebidas"> 
+                        Bebidas Alcohólicas
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="buceo"> 
+                        Clases de Buceo
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="expedicion"> 
+                        Tour de Expedición
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="fotografias"> 
+                        Paquete de Fotografías
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="pesca"> 
+                        Pesca en Altamar
+                    </label>
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Paquetes</button>
+            <button type="button" class="submit-btn" 
+            onclick="calcularPaquete()">Cotización Paquetes</button>
         </section>
+        </form>
     </div>
+    </form>
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
-        <p><strong>Ricardo Arturo Elizalde</strong></p>
-        <p>Matrícula: 12345678</p>
+        <p><strong>Ricardo Ismael Ontiveros Hernandez</strong></p>
+        <p>Matrícula: 43779</p>
         <p>WEB PAGE</p>
     </footer>
 
 
     <script src="script.js"></script>
+    
 </body>
 </html>
